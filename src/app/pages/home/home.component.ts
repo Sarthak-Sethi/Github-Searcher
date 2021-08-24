@@ -9,9 +9,10 @@ import { GithubService } from 'src/app/services/github.service';
 })
 export class HomeComponent implements OnInit {
 
-user : user = new user();
+user : any = null
   userName: string = '';
   error = null;
+  
 
 
   constructor(private githubservice: GithubService, private changedetector: ChangeDetectorRef) { }
@@ -23,12 +24,12 @@ user : user = new user();
   Finduser() {
     this.githubservice.getUserDetails(this.userName).subscribe(
       (user) => {
-        this.user = this.user;
+        this.user = user;
         this.error = null;
         this.changedetector.detectChanges();
       },
       (err) => {
-        this.user = new user;
+        this.user = null;
         this.error = err;
         console.log(err);
         this.changedetector.detectChanges();

@@ -2,7 +2,7 @@
 We created a function OnSubmit in ts file
 it takes a parmeter form .. so we pass it using #form="ngForm" -->
 
-<form (ngSubmit)="onSubmit(form)" #form="ngForm" >
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" class="m-5 p-4" >
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" name="email" ngModel aria-describedby="emailHelp"  required placeholder="Enter email">
@@ -13,5 +13,5 @@ it takes a parmeter form .. so we pass it using #form="ngForm" -->
       <input type="password" class="form-control"  name="password" ngModel required  placeholder="Password">
     </div>
 
-    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
   </form>

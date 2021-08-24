@@ -1,10 +1,11 @@
-<div class="card user-card text-white">
-    <div class="background bg-info">
-        <img [src]="user.avatar_url" alt="" class="img-fluid rounded-circle profile-piv border-white">
+<div class="card user-card ">
+    <div class="background bg-white">
+        <img [src]="user.avatar_url" alt="" class="img-fluid rounded-circle profile-pic border-white">
     </div>
 
     <div class="card-body">
         <h5 class="card-title"> {{user.name}} </h5>
-        <p class="card-text"> BIO : {{user.bio}} </p>
+        <p class="card-text"> Followers : {{user.followers}} </p>
+        <p class="card-text"> Following : {{user.following}} </p>
     </div>
 </div>

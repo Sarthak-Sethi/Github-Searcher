@@ -1,6 +1,11 @@
-<div *ngFor="let repo of repos" class="list-group">
+<div *ngFor="let repo of repos index as count" class="list-group">
+    <div class="card">
+        <div class="card-body text-center ">
+        
+            <a class="text-dark  text-decoration-none" [href]="repo.html_url" target="_blank">
+                {{count+1}}. {{repo.name}}
+            </a>
 
-    <a [href]="repo.html_url" target="_blank">
-        {{repo.name}}
-    </a>
+        </div>
+      </div>
 </div>

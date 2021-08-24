@@ -22,7 +22,7 @@ export class RepoComponent implements OnInit,OnChanges {
       },
       (err) => {
         console.log(err);
-        
+        this.repos = [];
       }
     )
   }
