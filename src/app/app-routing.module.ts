@@ -25,28 +25,6 @@ const routes: Routes = [
   {path:'error',component:PagenotfoundComponent},
   {path:'', component:HomeComponent ,canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToSignIn }},
   {path:'**', redirectTo:'/error',pathMatch:'full'},
-
-
-  // {
-  //   path: 'signIn',
-  //   component: SignInComponent,
-  //   canActivate: [AngularFireAuthGuard],
-  //   data: { authGuardPipe: redirectLoggedInToHome },
-  // },
-  // {
-  //   path: 'signUp',
-  //   component: SignUpComponent,
-  // },
-  // {
-  //   path: '',
-  //   component: HomeComponent,
-  //   canActivate: [AngularFireAuthGuard],
-  //   data: { authGuardPipe: redirectUnauthorizedToSignIn },
-  // },
-  // {
-  //   path: '**',
-  //   component: PagenotfoundComponent,
-  // },
 ];
 
 @NgModule({
